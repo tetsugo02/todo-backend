@@ -7,7 +7,7 @@ const app: Application = express();
 const PORT = process.env.PORT || 5001;
 app.use(express.json());
 app.use(cors());
-app.use(todoRoutes);
+app.use(" /api/todos", todoRoutes);
 mongoose.connect("mongodb://localhost:27017/express-mongo");
 
 app.get("/", (req, res) => {
